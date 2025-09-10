@@ -15,7 +15,8 @@
     <title>Enjoy Travel</title>
   </head>
   <body>
-    <header class="fixed top-0 left-0 w-full backdrop-blur-md">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full backdrop-blur-md z-20">
       <!-- Navbar -->
 
       <nav class="navbar align-elements text-white">
@@ -56,6 +57,7 @@
       </nav>
     </header>
 
+    <!-- Main -->
     <main>
       <!-- Hero section -->
       <section
@@ -230,9 +232,11 @@
                           Place image
                         </p>
                         <input
-                          name="file"
-                          type="file"
-                          class="file-input file-input-primary"
+                          name="image"
+                          type="url"
+                          class="input validator placeholder-gray-400 text-black"
+                          required
+                          placeholder="url"
                         />
                       </label>
 
@@ -269,10 +273,11 @@
           </div>
 
           <!-- Cards -->
-
           <div
+            id="card-container"
             class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 main-container my-20"
-          >
+          ></div>
+          <template id="template">
             <div class="card bg-base-100 shadow-sm rounded-xl">
               <figure class="">
                 <img
@@ -285,23 +290,29 @@
                 <!-- body header -->
                 <div>
                   <h2 class="card-title tour-title">Berlin Tour</h2>
-                  <p class="text-xs">Berlin City</p>
+                  <p class="text-xs travel-location">Berlin City</p>
                 </div>
                 <!-- body center -->
                 <div class="flex justify-between">
-                  <p class="font-bold">3-days</p>
-                  <p class="text-xs text-end">20 travelers</p>
+                  <p class="font-bold travel-days">3-days</p>
+                  <p class="text-xs text-end travelers-sum">20 travelers</p>
                 </div>
 
                 <!-- body end -->
                 <div class="flex justify-between items-center">
-                  <div class="text-xs bg-primary text-white p-1 rounded">
+                  <div class="text-xs bg-primary text-white p-1 rounded nights">
                     Flight + 2 nights
                   </div>
-                  <p class="text-xl font-bold text-end text-primary">$200</p>
+                  <p
+                    class="text-xl font-bold text-end text-primary travel-price"
+                  >
+                    $200
+                  </p>
                 </div>
 
-                <p class="text-xs text-gray-500 line-clamp-2 tour-subtitle">
+                <p
+                  class="text-xs text-gray-500 overflow-x-auto line-clamp-2 tour-subtitle"
+                >
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                   Quasi esse architecto nesciunt deserunt dolores? Eveniet
                   repellendus dolores velit veritatis unde.
@@ -314,10 +325,20 @@
                 </div>
               </div>
             </div>
-          </div>
+          </template>
         </div>
       </section>
     </main>
+
+    <!-- loader -->
+    <div class="overlay hidden" id="overlay">
+      <div class="lds-ring">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
 
     <script type="module" src="/src/main.js"></script>
   </body>
