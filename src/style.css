@@ -1,0 +1,27 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+html,
+body {
+  @apply h-full;
+}
+
+body {
+  @apply flex flex-col;
+}
+
+main {
+  @apply grow;
+}
+
+@layer components {
+  .align-elements {
+    @apply max-w-[1300px] mx-auto px-5;
+  }
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
