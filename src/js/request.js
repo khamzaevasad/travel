@@ -1,4 +1,5 @@
 import axios from "axios";
+import { loader } from "./loader";
 
 const axiosInstance = axios.create({
   baseURL: "https://json-api.uz/api/project/axios",
@@ -10,9 +11,9 @@ export async function getData(url) {
   }
 
   try {
-    // loading(true)
+    loader(true);
     const response = await axiosInstance.get(url);
-    // loading(false)
+    loader(false);
     return response.data;
   } catch (error) {
     console.error("API request error:", error);

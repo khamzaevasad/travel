@@ -16,7 +16,7 @@
   </head>
   <body>
     <!-- Header -->
-    <header class="fixed top-0 left-0 w-full backdrop-blur-md">
+    <header class="fixed top-0 left-0 w-full backdrop-blur-md z-20">
       <!-- Navbar -->
 
       <nav class="navbar align-elements text-white">
@@ -321,6 +321,16 @@
         </div>
       </section>
     </main>
+
+    <!-- loader -->
+    <div class="overlay hidden" id="overlay">
+      <div class="lds-ring">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
 
     <script type="module" src="/src/main.js"></script>
   </body>
