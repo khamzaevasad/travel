@@ -5,8 +5,9 @@ export function updateUI(data, template, containerEl) {
 
   containerEl.innerHTML = "";
 
-  data.forEach((item) => {
-    console.log(item);
+  const items = Array.isArray(data) ? data : [data];
+
+  items.forEach((item) => {
     const {
       id,
       image,
@@ -28,7 +29,6 @@ export function updateUI(data, template, containerEl) {
     const travelersSum = clone.querySelector(".travelers-sum");
     const nights = clone.querySelector(".nights");
     const price = clone.querySelector(".travel-price");
-    console.log(price);
     const subtitle = clone.querySelector(".tour-subtitle");
 
     tourImg.src = image;
@@ -37,7 +37,7 @@ export function updateUI(data, template, containerEl) {
     duration.textContent = `${daysCount} days`;
     travelersSum.textContent = `${travelersCount} travelers`;
     nights.textContent = `${daysCount - 1} night`;
-    price.textContent = formatNumber(travelPrice);
+    price.textContent = formatNumber(Number(travelPrice));
     subtitle.textContent = travelDescription;
     fragment.appendChild(clone);
   });

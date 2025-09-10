@@ -1,7 +1,7 @@
 import axios from "axios";
 import { loader } from "./loader";
 
-const axiosInstance = axios.create({
+export const axiosInstance = axios.create({
   baseURL: "https://json-api.uz/api/project/axios",
 });
 
