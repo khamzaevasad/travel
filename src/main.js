@@ -4,7 +4,7 @@ import "./js/action";
 
 import { axiosInstance } from "./js/request";
 import { getData } from "./js/request";
-import { updateUI } from "./js/updateUI";
+import { addCard, updateUI } from "./js/updateUI";
 
 const template = document.getElementById("template");
 const containerEl = document.getElementById("card-container");
@@ -25,12 +25,7 @@ formEl.addEventListener("submit", async (e) => {
   const data = Object.fromEntries(formData);
   try {
     const res = await axiosInstance.post("/packages", data);
-    // updateUI(res, template, containerEl);
-    getData(url)
-      .then(({ data }) => updateUI(data, template, containerEl))
-      .catch((error) => console.log(error));
-  } catch (error) {
-    console.log(error.message);
+    addCard(res.data, containerEl);
   } finally {
     document.querySelector(".submit-btn").textContent = "Create";
     document.querySelector(".submit-btn").disabled = false;
