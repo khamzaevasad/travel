@@ -1,3 +1,4 @@
+import { deleteCard } from "../main.js";
 import { formatNumber } from "./formatNumber.js";
 
 export function updateUI(data, template, containerEl) {
@@ -31,6 +32,12 @@ export function updateUI(data, template, containerEl) {
     const price = clone.querySelector(".travel-price");
     const subtitle = clone.querySelector(".tour-subtitle");
     const card = clone.querySelector(".card-travel");
+    const deleteBtn = clone.querySelector(".delete-btn");
+
+    deleteBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      deleteCard(id);
+    });
 
     tourImg.src = image;
     tourTitle.textContent = travelTitle;
