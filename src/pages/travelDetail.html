@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/bagage.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Enjoy Travel</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full backdrop-blur-md z-20">
+      <!-- Navbar -->
+
+      <nav class="navbar align-elements text-white">
+        <div class="navbar-start">
+          <a href="./index.html" class="text-2xl font-bold">
+            <span><i class="fa-solid fa-suitcase-rolling"></i></span>Enjoy
+            Travel
+          </a>
+        </div>
+        <div class="navbar-end"></div>
+      </nav>
+    </header>
+
+    <!-- Main -->
+    <main>
+      <section
+        class="pt-30 min-h-screen"
+        style="
+          background-image: url('https://images.unsplash.com/photo-1665470298997-86b6e79799db?q=80&w=2533&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+        "
+      >
+        <div class="hero-overlay"></div>
+
+        <!-- detail info -->
+        <div class="align-elements">
+          <div
+            class="card lg:card-side backdrop-blur-2xl shadow-2xl detail-card"
+          >
+            <figure
+              class="w-full max-w-[400px] lg:max-w-[500px] xl:max-w-[600px] object-cover mx-auto"
+            >
+              <img class="detail-img" src="
+              https://images.unsplash.com/photo-1583265266785-aab9e443ee68?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              " alt="img" />
+            </figure>
+            <div class="card-body">
+              <div>
+                <h2
+                  class="card-title font-bold text-3xl text-info detail-title"
+                >
+                  Classic Europe Tour
+                </h2>
+                <p class="my-4 font-bold text-white detail-desc">
+                  10-day guided tour through Paris, Rome and Barcelona with
+                  4-star hotels and daily breakfast.
+                </p>
+
+                <div class="text-white">
+                  <span class="font-bold">Destinations:</span>
+                  This tour includes visits to multiple exciting destinations
+                  such as <span id="destinations">Paris, Rome, Barcelona</span>.
+                  You will explore cultural landmarks, enjoy local cuisine, and
+                  experience the unique atmosphere each city has to offer.
+                </div>
+                <!-- detail info -->
+                <div class="my-2">
+                  <h3 class="text-3xl font-bold text-info my-4">
+                    Package Details
+                  </h3>
+                  <span class="font-bold text-white">Travel Start date:</span>
+                  <span id="date" class="text-white">2025-05-10</span><br />
+                  <span class="font-bold text-white">Travel Duration:</span>
+                  <span id="dayCount" class="text-white">10 days</span><br />
+                  <span class="font-bold text-white">Number of Travelers:</span>
+                  <span id="members" class="text-white">20 people</span><br />
+                  <span class="font-bold text-white">Travel Price:</span>
+                  <span id="detailPrice" class="text-white">$2590</span>
+                </div>
+
+                <div>
+                  <h3 class="text-primary-content font-light italic">
+                    Experience the adventure of a lifetime with this
+                    thoughtfully designed tour that brings together captivating
+                    destinations, local culture, and memories you'll treasure
+                    forever.
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- loader -->
+    <div class="overlay hidden" id="overlay">
+      <div class="lds-ring">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+    <script type="module" src="../js/detail.js"></script>
+  </body>
+</html>

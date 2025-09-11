@@ -17,7 +17,6 @@ export function updateUI(data, template, containerEl) {
       travelPrice,
       travelTitle,
       travelersCount,
-      date,
       daysCount,
     } = item;
 
@@ -39,6 +38,7 @@ export function updateUI(data, template, containerEl) {
       deleteCard(id);
     });
 
+    card.href = `/src/pages/travelDetail.html?id=${id}`;
     card.dataset.title = travelLocation;
     tourImg.src = image;
     tourTitle.textContent = travelTitle;
