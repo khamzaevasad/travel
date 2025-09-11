@@ -13,7 +13,7 @@ const template = document.getElementById("template");
 const containerEl = document.getElementById("card-container");
 const formEl = document.getElementById("form");
 
-const url = "https://json-api.uz/api/project/axios/packages";
+export let url = "https://json-api.uz/api/project/axios/packages";
 
 getData(url)
   .then(({ data }) => updateUI(data, template, containerEl))
