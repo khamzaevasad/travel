@@ -39,6 +39,7 @@ export function updateUI(data, template, containerEl) {
       deleteCard(id);
     });
 
+    card.dataset.title = travelLocation;
     tourImg.src = image;
     tourTitle.textContent = travelTitle;
     location.textContent = travelLocation;
