@@ -26,15 +26,7 @@
             Travel
           </a>
         </div>
-        <div class="navbar-end">
-          <label>
-            <input
-              type="text"
-              class="backdrop-blur-md rounded-xl py-2 px-4 outline-none"
-              placeholder="Search"
-            />
-          </label>
-        </div>
+        <div class="navbar-end"></div>
       </nav>
     </header>
 
@@ -60,7 +52,7 @@
               </p>
               <div>
                 <!-- MODAL Form -->
-                <label for="my_modal_7" class="btn btn-primary"
+                <label for="my_modal_7" class="btn btn-primary create-btn"
                   >Enjoy Travel</label
                 >
                 <!-- Put this part before </body> tag -->
@@ -268,6 +260,26 @@
               Discover the world's most beautiful places with our curated tour
               packages
             </p>
+
+            <div class="block my-5">
+              <label>
+                <input
+                  id="search"
+                  type="text"
+                  class="backdrop-blur-2xl rounded-xl py-2 px-4 outline-none text-white w-[400px]"
+                  placeholder="Search"
+                />
+              </label>
+            </div>
+
+            <!-- empty container -->
+            <div class="text-center empty-container hidden">
+              <h3 class="text-2xl text-primary-content py-10">
+                You can’t find the tour package on the page you’re looking for,
+                <br />but you can add a tour package to the page by clicking the
+                <span class="font-bold">Enjoy Travel button</span> at the top.
+              </h3>
+            </div>
           </div>
 
           <!-- Cards -->
@@ -323,11 +335,7 @@
 
                 <p
                   class="text-xs text-white overflow-x-auto line-clamp-2 tour-subtitle"
-                >
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Quasi esse architecto nesciunt deserunt dolores? Eveniet
-                  repellendus dolores velit veritatis unde.
-                </p>
+                ></p>
                 <!-- Delete Btn -->
                 <div class="card-actions">
                   <button class="btn btn-primary btn-outline w-full delete-btn">

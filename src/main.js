@@ -1,5 +1,6 @@
 import "./style.css";
 import "./js/action";
+import "./js/search";
 import Toastify from "toastify-js";
 import "toastify-js/src/toastify.css";
 // import "./js/post";
@@ -36,15 +37,18 @@ formEl.addEventListener("submit", async (e) => {
 });
 
 export function deleteCard(id) {
-  axiosInstance.delete(`packages/${id}`).then((response) => {
-    console.log(response.data);
-    Toastify({
-      text: "Delete success",
-      duration: 3000,
-      gravity: "top",
-      position: "center",
-      className:
-        "bg-green-500 text-white px-4 py-2 rounded-lg shadow-md font-medium",
-    }).showToast();
-  });
+  axiosInstance
+    .delete(`packages/${id}`)
+    .then((response) => {
+      console.log(response.data);
+      Toastify({
+        text: "Delete success",
+        duration: 3000,
+        gravity: "top",
+        position: "center",
+        className:
+          "bg-green-500 text-white px-4 py-2 rounded-lg shadow-md font-medium",
+      }).showToast();
+    })
+    .catch((error) => console.log(error));
 }
