@@ -37,7 +37,7 @@ export function updateDetail(data, template, containerEl) {
     duration.textContent = `${daysCount} days`;
     travelersSum.textContent = `${travelersCount} travelers`;
     nights.textContent = `${daysCount - 1} night`;
-    price.textContent = `price {travelPrice}`;
+    price.textContent = `$${travelPrice}`;
     subtitle.textContent = travelDescription;
     fragment.appendChild(clone);
   });
