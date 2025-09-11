@@ -1,5 +1,7 @@
 import "./style.css";
 import "./js/action";
+import Toastify from "toastify-js";
+import "toastify-js/src/toastify.css";
 // import "./js/post";
 
 import { axiosInstance } from "./js/request";
@@ -18,7 +20,6 @@ getData(url)
 
 formEl.addEventListener("submit", async (e) => {
   e.preventDefault();
-
   document.querySelector(".submit-btn").textContent = "loading...";
   document.querySelector(".submit-btn").disabled = true;
   const formData = new FormData(formEl);
@@ -33,3 +34,17 @@ formEl.addEventListener("submit", async (e) => {
     document.getElementById("my_modal_7").checked = false;
   }
 });
+
+export function deleteCard(id) {
+  axiosInstance.delete(`packages/${id}`).then((response) => {
+    console.log(response.data);
+    Toastify({
+      text: "Delete success",
+      duration: 3000,
+      gravity: "top",
+      position: "center",
+      className:
+        "bg-green-500 text-white px-4 py-2 rounded-lg shadow-md font-medium",
+    }).showToast();
+  });
+}
