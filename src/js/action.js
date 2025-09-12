@@ -272,5 +272,5 @@ const subtitles = [
   "Premium destinations await with luxury resorts, private excursions, and memories that last forever."
 ];
 
-new SubtitleAnimator('mainHeroSubtitle', subtitles, 4000);
+
 */
