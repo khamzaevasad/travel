@@ -36,13 +36,16 @@ formEl.addEventListener("submit", async (e) => {
   }
 });
 
-export function deleteCard(id) {
+export function deleteCard(id, cardEl) {
   axiosInstance
     .delete(`packages/${id}`)
     .then((response) => {
+      if (cardEl) {
+        cardEl.remove();
+      }
       console.log(response.data);
       Toastify({
-        text: "Delete success",
+        text: "Deleted successfully",
         duration: 3000,
         gravity: "top",
         position: "center",

@@ -35,7 +35,7 @@ export function updateUI(data, template, containerEl) {
 
     deleteBtn.addEventListener("click", (e) => {
       e.preventDefault();
-      deleteCard(id);
+      deleteCard(id, card);
     });
 
     card.href = `/src/pages/travelDetail.html?id=${id}`;
